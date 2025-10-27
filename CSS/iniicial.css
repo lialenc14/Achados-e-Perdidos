@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -6,27 +6,59 @@ body{
 
     background-image: url("/Imgs/BACKGROUND.png");
     background-size: cover;
+    overflow-y: hidden;
 }
-.barra{
+
+.barra {
     width: 90vw;
     height: 38px;
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 15px;
-    margin-bottom: 45px;
+    margin: 5px;
+    margin-bottom: 25px;
 }
-input{
+
+input {
     width: 239px;
     height: 38px;
     text-align: center;
     border-radius: 5px;
     border: none;
 }
-::placeholder{
+
+::placeholder {
     font-size: 12px;
 }
-.inicio{
+
+.conta{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    background-color: #3BC350;
+
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    list-style: none;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+i{
+    margin-right: 15px;
+}
+
+.inicio {
     width: 70vw;
     display: flex;
     flex-direction: row;
@@ -34,9 +66,10 @@ input{
     justify-content: center;
     align-items: center;
 }
-.item{
-    width: 270px;
-    height: 270px;
+
+.item {
+    width: 250px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -47,8 +80,9 @@ input{
 
     background-color: rgba(255, 255, 255, 1);
 }
-#solicitar{
-    width: 271px;
+
+.solicitar {
+    width: 251px;
     height: 43px;
 
     background-color: #27C840;
@@ -57,16 +91,61 @@ input{
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
 }
-.foto{
+
+.solicitado {
+    background-color: #DB4444;
+}
+
+.foto {
     width: 199px;
     height: 176px;
 }
-#perfil{
-        width: 32px;
-        height: 32px;
-    }
-a{
+
+#perfil {
+    width: 32px;
+    height: 32px;
+}
+
+a {
     text-decoration: none;
     font-size: 18px;
     color: rgba(255, 255, 255, 1);
+}
+
+.menu{
+    display: none;
+}
+.menu.open {
+
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: #27C840;
+    z-index: 1;
+}
+
+.menu .conteudo{
+    width: 442px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 80px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.menu img{
+    width: 350px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.menu .linha {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 12px 0;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achados e Perdidos</title>
     <link rel="stylesheet" href="/CSS/iniicial.css">
+    <script src="https://kit.fontawesome.com/e1cda3af41.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="barra">
@@ -15,31 +16,53 @@
         <input type="text" placeholder="Pesquisar Item Perdido" id="pesquisa">
         <img src="/Imgs/user.png" alt="usuario" id="perfil">
     </header>
+    <div class="conta">
+            <ul class="lista">
+                <li><a href=""><i class="fa-regular fa-user"></i>Minha Conta</a></li>
+                <li><a href=""><i class="fa-solid fa-bag-shopping"></i>Retirados</a></li>
+                <li><a href=""><i class="fa-regular fa-circle-xmark"></i>Pendentes</a></li>
+                <li><a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>
+            </ul>
+        </div>
     <div class="inicio">
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
         <div class="item">
             <img src="/Imgs/ITEM.png" alt="item perdido" class="foto">
-            <button id="solicitar">Solicitar Retirada</button>
+            <button class="solicitar">Solicitar Retirada</button>
         </div>
     </div>
+    <div class="menu">
+            <img src="/Imgs/ITEM.png" alt="item">
+            <div class="conteudo">
+                <h1>Produto Perdido: (nome do produto)</h1>
+                <p>O produto (nome do produto) foi perdido em (dia/mês/ano) durante o transporte ou manuseio. Trata-se de um item de grande importância, caracterizado por (breve descrição do produto – cor, tamanho, modelo, marca, etc.).
+                Estamos empenhados em localizar o produto e garantir que seja devolvido ao proprietário ou substituído adequadamente. Caso tenha qualquer informação sobre o paradeiro do (nome do produto), entre em contato com nossa equipe através do formulário de suporte em nosso site.</p>
+                <div class="linha"></div>
+                <button class="solicitar">Solicitar retirada agora</button>
+                <div class="status">
+                    <p class="status_atual">Status atual:</p>
+                </div>
+            </div>
+        </div>
+    <script src="/Js/inicio.Js"></script>
 </body>
 </html>
