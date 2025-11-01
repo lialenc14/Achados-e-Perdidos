@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achados e Perdidos</title>
+    <link rel="stylesheet" href="/CSS/Global.css">
+    <link rel="stylesheet" href="/CSS/perdidos.css">
+    <script src="https://kit.fontawesome.com/e1cda3af41.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="barra">
+        <img src="/Imgs/LOGO.png" alt="">
+        <a href="/Pages/inicial.html">Inicio</a>
+        <a href="/Pages/ItensPerdidos.html">Perdidos</a>
+        <a href="/Pages/registrar.html">Registrar</a>
+        <input type="text" placeholder="Pesquisar Item Perdido" id="pesquisa">
+        <img src="/Imgs/user.png" alt="usuario" id="perfil">
+    </header>
+    <div class="conta">
+            <ul class="lista">
+                <li><a href=""><i class="fa-regular fa-user"></i>Minha Conta</a></li>
+                <li><a href=""><i class="fa-solid fa-bag-shopping"></i>Retirados</a></li>
+                <li><a href=""><i class="fa-regular fa-circle-xmark"></i>Pendentes</a></li>
+                <li><a href=""><i class="fa-solid fa-right-from-bracket"></i>Sair</a></li>
+            </ul>
+    </div>
+    <main>
+        <h1>Registrar Item Perdido</h1>
+        <h2>Nome</h2>
+        <input type="text" placeholder="Nome do Item" class="formulario" id="nome">
+        <h2>Descrição</h2>
+        <input type="text" placeholder="Descrição" class="formulario" id="descricao">
+        <h2>Imagem</h2>
+        <input type="file" class="formulario" id="data">
+        <button type="submit" id="confirmar">Confirmar</button>
+    </main>
+    <script src="/Js/perdidos.js"></script>
+</body>
