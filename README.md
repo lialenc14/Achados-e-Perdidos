@@ -1,13 +1,13 @@
 
-# Achados e Perdidos — Revisão curta
+# Achados e Perdidos
 
-Resumo rápido das funcionalidades principais do protótipo:
+Resumo das funcionalidades principais do protótipo:
 
 - Login / Perfil
 	- Ícone de usuário (`#perfil`) abre/fecha um painel `.conta` (não há autenticação real).
 
 - Página Inicial
-	- Lista de itens em cards (`.item`) com foto, nome, descrição e botão "Solicitar Retirada" (toggle visual).
+	- Lista de itens em cards (`.item`) com foto, nome, descrição, data e botão "Solicitar Retirada".
 	- Clicar no card abre detalhes se o painel `.menu` estiver presente.
 
 - Registro de Itens
