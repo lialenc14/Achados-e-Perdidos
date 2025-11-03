@@ -50,6 +50,7 @@ a {
     justify-content: baseline;
     align-items: center;
      background: linear-gradient(180deg,rgb(45, 187, 66) 0%, rgba(59, 195, 80, 1) 50%, rgb(24, 161, 44) 100%);
+     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
 }
 .lista{
@@ -72,40 +73,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-.item {
-    width: 250px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-
-    gap: 25px;
-    margin: 10px;
-
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.solicitar {
-    width: 251px;
-    height: 43px;
-
-    background-color: #27C840;
-    box-shadow: 1px 2px 5px black;
-    border: none;
-    font-size: 18px;
-    color: rgba(255, 255, 255, 1);
-}
-
-.solicitado {
-    background-color: #DB4444;
-}
-
-.foto {
-    width: 199px;
-    height: 176px;
 }
 
 i{

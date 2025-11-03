@@ -1,3 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.inicio{
+    width: 90vw;
+    min-height: 400px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
 #limpar{
+    width: 251px;
+    height: 43px;
+    z-index: 3;
+    right: 50px;
+    bottom: 50px;
+    border: none;
+    font-size: 18px;
+    background-color: #DB4444;
+    box-shadow: 1px 2px 5px black;
+    color: rgba(255, 255, 255, 1);
     position: absolute;
+}
+#vazio{
+    width: 350px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 2mm;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+.item{
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: initial;
+    margin: 15px;
+    background: linear-gradient(180deg,rgb(45, 187, 66) 0%, rgba(59, 195, 80, 1) 50%, rgb(24, 161, 44) 100%);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.item .foto{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin: 10px;
+}
+
+.texto{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    word-wrap: break-word;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 1px 2px black;
+}
+.solicitar {
+    width: 251px;
+    height: 30px;
+    margin: 10px;
+
+    background-color: #27C840;
+    box-shadow: 1px 2px 5px black;
+    border: none;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+h3{
+    margin: 0 0 0.25rem 0;
+    font-size: 20px;
+}
+
+.item .texto p{
+    font-size: 16px;
 }

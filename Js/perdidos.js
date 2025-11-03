@@ -4,14 +4,30 @@ const foto = document.getElementById("foto");
 const confirmar = document.getElementById("confirmar");
 const inicio = document.querySelector(".inicio");
 const limpar = document.getElementById("limpar")
+const conta = document.querySelector('.conta');
+const perfil = document.getElementById('perfil');
 
-function criarItem({ nome, imagem, descricao }) {
+if (conta && perfil) {
+  conta.style.display = 'none';
+
+  perfil.addEventListener('click', function() {
+    conta.style.display = conta.style.display === 'none' ? 'flex' : 'none';
+  });
+}
+
+
+function criarItem({ nome, imagem, descricao, data, hora }) {
     const div = document.createElement("div");
     div.classList.add("item");
     div.innerHTML = `
         <img src="${imagem}" alt="item perdido" class="foto">
-        <h3>${nome}</h3>
-        <p>${descricao}</p>
+        <div class="texto">
+            <h3>${nome}</h3>
+            <p>${descricao}</p>
+            <p id = "data">Data de registro: ${data}</p>
+            <p id = "hora"></p>Hora de registro: ${hora}</p>
+            <button class="solicitar">Solicitar Retirada</button>
+        </div>
         `;
     return div;
 };
@@ -23,14 +39,30 @@ function carregarItem(){
         const item = criarItem(dados);
         inicio.appendChild(item);
     });
+
+    if(itensSalvos.length === 0){
+        inicio.innerHTML = `
+        <div id = "vazio">Nenhum item perdido cadastrado.</div>
+        <button id="limpar">Limpar lista</button>`;
+    };
 };
 
 if(confirmar){
     confirmar.addEventListener("click", function(){
-        const NovoItem = {
+
+        const agora = new Date();
+        const data = agora.toLocaleDateString();
+        const hora = agora.toLocaleTimeString();
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const NovoItem = {
             nome: nome.value,
             descricao: descricao.value,
-            imagem: foto.value
+            imagem: e.target.result,
+            data: data,
+            hora: hora
         };
         const itens = JSON.parse(localStorage.getItem("itens")) || []
 
@@ -44,13 +76,18 @@ if(confirmar){
         nome.value = "";
         descricao.value = "";
         foto.value = "";
-    })
+    }
+    reader.readAsDataURL(foto.files[0]);
+});
+
 };
 
 if(limpar){
     limpar.addEventListener("click", function(){
         localStorage.removeItem("itens");
-        inicio.innerHTML = `<button id="limpar">Limpar lista</button>`;
+        inicio.innerHTML = `
+        <div id = "vazio">Nenhum item perdido cadastrado.</div>
+        <button id="limpar">Limpar lista</button>`;
     })
 };
 
